@@ -9,7 +9,7 @@ function append(role, text) {
   if (!log) return;
   const li = document.createElement("li");
   li.className = `chat-msg chat-${role}`;
-  const who = role === "user" ? "you" : "taki";
+  const who = role === "user" ? "you" : "$";
   li.innerHTML = `<span class="who">${who}</span><span class="bubble">${escapeHtml(text)}</span>`;
   log.appendChild(li);
   log.scrollTop = log.scrollHeight;
@@ -60,5 +60,5 @@ export function initChat() {
     send(text);
   });
 
-  append("assistant", "yo. what's the play.");
+  append("assistant", "yo.");
 }

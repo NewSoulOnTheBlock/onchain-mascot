@@ -1,7 +1,7 @@
 export const MASCOT = {
-  name: "mf taki tiger",
-  shortName: "taki",
-  tagline: "moneymaxxing apex plush",
+  name: "",
+  shortName: "",
+  tagline: "",
   birthUtc: "2026-05-01T11:37:46Z",
   lifespanYears: 10,
   wallet: "49hca5vrJ3ca1T2hEAiHa61HCRRw8E7AsxJMsoU8xVGo",

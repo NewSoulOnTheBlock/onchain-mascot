@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>mf taki tiger — onchain moneymaxxing plush</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <video id="bgVideo" class="bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="./assets/bg.mp4?v=5" type="video/mp4" />
+  </video>
+
+  <header class="topbar">
+    <div class="brand">$ mf taki tiger $</div>
+    <nav>
+      <a href="./docs.html">docs</a>
+      <button id="walletBtn" class="wallet-btn">connect</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="megaClock" class="mega-clock">000d 00:00:00</h1>
+    <p class="subtitle">alive since <span id="birthLabel"></span> · dies <span id="deathLabel"></span></p>
+
+    <section class="cabinet">
+      <div class="cabinet-frame">
+        <div class="screen">
+          <div class="scanlines"></div>
+          <div class="screen-grid">
+            <div class="screen-clocks">
+              <div><span class="lbl">human</span><span id="humanClock">0d 00:00:00</span></div>
+              <div><span class="lbl">taki</span><span id="mascotClock">0d 00:00:00</span></div>
+            </div>
+            <div class="sprite-wrap">
+              <model-viewer
+                id="sprite"
+                class="sprite-3d"
+                src="./assets/taki.glb"
+                alt="mf taki tiger"
+                auto-rotate
+                rotation-per-second="20deg"
+                camera-controls
+                touch-action="pan-y"
+                interaction-prompt="none"
+                exposure="1.1"
+                shadow-intensity="0.6"
+                disable-zoom>
+              </model-viewer>
+            </div>
+            <div class="cost">
+              <div><span class="lbl">today</span><span id="costToday">— SOL</span></div>
+              <div><span class="lbl">tomorrow</span><span id="costTomorrow">— SOL</span></div>
+              <div><span class="lbl">eaten</span><span id="costEaten">— SOL</span></div>
+            </div>
+            <div class="stats">
+              <div class="stat"><span>💵 bag</span><div class="bar"><i id="bar-health"></i></div></div>
+              <div class="stat"><span>😼 vibe</span><div class="bar"><i id="bar-happy"></i></div></div>
+              <div class="stat"><span>⚡ grind</span><div class="bar"><i id="bar-active"></i></div></div>
+              <div class="stat"><span>🐅 pride</span><div class="bar"><i id="bar-social"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="action" data-action="feed">💵<span>feed</span></button>
+        <button class="action" data-action="hug">😼<span>pet</span></button>
+        <button class="action" data-action="play">⚡<span>grind</span></button>
+        <button class="action" data-action="talk">🐅<span>roar</span></button>
+      </div>
+    </section>
+
+    <section class="chat-section">
+      <h2 class="chat-title">talk to taki</h2>
+      <ul id="chatLog" class="chat-log"></ul>
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <input id="chatInput" maxlength="500" placeholder="ask taki anything…" />
+        <button type="submit">send</button>
+      </form>
+      <p class="chat-hint">powered by groq · llama-3.1-8b-instant · taki is a plush, not a fiduciary</p>
+    </section>
+  </main>
+
+  <button id="trollboxBtn" class="fab fab-left" title="chat">💬<span id="unreadBadge" class="badge hidden">0</span></button>
+  <aside id="trollbox" class="trollbox hidden">
+    <header><span>trollbox</span><button id="trollboxClose">×</button></header>
+    <ul id="trollboxList"></ul>
+    <form id="trollboxForm">
+      <input id="trollboxInput" maxlength="200" placeholder="say something…" autocomplete="off" />
+      <button type="submit">send</button>
+    </form>
+  </aside>
+
+  <button id="musicBtn" class="fab fab-right" title="music">🔇</button>
+  <audio id="bgm" src="./assets/bgm.mp3" loop preload="none"></audio>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

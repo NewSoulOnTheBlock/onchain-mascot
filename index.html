@@ -81,6 +81,18 @@
       </form>
       <p class="chat-hint">powered by groq · llama-3.1-8b-instant · Onchain Eevee is a Pokemon, not a fiduciary</p>
     </section>
+
+    <section class="rng-section">
+      <h2 class="chat-title">🎲 onchain rng</h2>
+      <p class="rng-tagline">pay 0.01 SOL · roll a number 0–1000 · verified onchain</p>
+      <div class="rng-stage">
+        <div id="rngResult" class="rng-result"></div>
+        <button id="rngBtn" class="rng-btn">roll</button>
+        <div id="rngStatus" class="rng-status"></div>
+      </div>
+      <ul id="rngHistory" class="rng-history"></ul>
+      <p class="chat-hint">payment routed via @pump-fun/agent-payments-sdk · verified server-side before result</p>
+    </section>
   </main>
 
   <button id="trollboxBtn" class="fab fab-left" title="chat">💬<span id="unreadBadge" class="badge hidden">0</span></button>

@@ -126,3 +126,18 @@ img.sprite{display:block}
 .chat-form input:focus{border-color:var(--gold);box-shadow:0 0 12px #ffd84d33}
 .chat-form button{background:var(--gold);color:#0a1a0a;border:none;padding:0 18px;border-radius:10px;cursor:pointer;font:inherit;font-weight:700}
 .chat-hint{margin:8px 0 0;font-size:11px;opacity:.5;text-align:center}
+
+/* rng */
+.rng-section{margin-top:36px;width:min(720px,95vw);margin-left:auto;margin-right:auto;text-align:center}
+.rng-tagline{opacity:.7;font-size:13px;margin:0 0 16px}
+.rng-stage{display:flex;flex-direction:column;align-items:center;gap:12px;padding:24px 14px;background:#091a0e;border:1px solid #1a4d22;border-radius:14px}
+.rng-result{font-size:clamp(56px,12vw,120px);font-weight:800;letter-spacing:.02em;line-height:1;min-height:1em;background:linear-gradient(90deg,var(--gold),var(--green),var(--gold));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:aurora 4s linear infinite}
+.rng-btn{font:inherit;font-size:18px;padding:14px 36px;border-radius:12px;background:var(--gold);color:#0a1a0a;border:none;cursor:pointer;font-weight:800;letter-spacing:.05em;transition:transform .1s ease, box-shadow .2s ease}
+.rng-btn:hover{box-shadow:0 0 20px var(--gold)}
+.rng-btn:active{transform:translateY(1px)}
+.rng-btn:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}
+.rng-status{font-size:12px;opacity:.7;min-height:1em;letter-spacing:.05em}
+.rng-history{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.rng-history li{display:flex;align-items:center;gap:6px;background:#10331a;border:1px solid #1a4d22;padding:4px 10px;border-radius:999px;font-size:12px}
+.rng-history .rng-num{font-weight:700;color:var(--gold)}
+.rng-history .rng-time{opacity:.5;font-size:10px}

@@ -7,6 +7,7 @@ import { startCostLoop } from "./cost.js";
 import { initTrollbox } from "./trollbox.js";
 import { initMusic } from "./music.js";
 import { initChat } from "./chat.js";
+import { initRng } from "./rng.js";
 
 startClocks();
 initWalletUi();
@@ -16,6 +17,7 @@ startRpcLoop();
 startCostLoop();
 initMusic();
 initChat();
+initRng();
 initTrollbox().catch((e) => console.warn("trollbox init failed", e));
 
 // nudge bg video to play if autoplay was blocked
